@@ -137,6 +137,7 @@ filetype plugin indent on     " required
 " NOTE: comments after Bundle commands are not allowed.
 
 let g:neocomplete#enable_at_startup = 1
+"set guifont=PowerlineSymbols\ for\ Powerline
 let g:Powerline_symbols='fanyc'
 
 " 颜色主题
@@ -157,6 +158,7 @@ set nocompatible
 set laststatus=2    " always have status-line
 set rnu             " enable relative-line-number
 set cursorcolumn    " hightlight current column
+"set cursorline
 
 filetype on
 " syntax highlight
