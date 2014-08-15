@@ -146,7 +146,7 @@ set t_Co=256
 colorscheme desert256   " tty
 
 "set makeprg=nmake
-"设置标签文件名(路径)
+set grepprg=ack\ -k
 set tags=tags;
 set autochdir
 set noswapfile
@@ -157,7 +157,7 @@ set number
 set nocompatible
 set laststatus=2    " always have status-line
 set rnu             " enable relative-line-number
-set cursorcolumn    " hightlight current column
+"set cursorcolumn    " hightlight current column
 "set cursorline
 
 filetype on
@@ -170,13 +170,11 @@ au BufNewFile,BufRead *.inc set filetype=nasm
 au bufreadpre,bufRead *.bnf set ft=bnf
 au BufNewFile,BufRead *.ebnf set filetype=ebnf
 
-" Tab specific option
-set tabstop=8                   "A tab is 8 spaces
+set tabstop=8                   "tab: 8 spaces
 set expandtab                   "Always uses spaces instead of tabs
 set softtabstop=4               "Insert 4 spaces when tab is pressed
 set shiftwidth=4                "An indent is 4 spaces
 set smarttab                    "Indent instead of tab at start of line
 set shiftround                  "Round spaces to nearest shiftwidth multiple
-set nojoinspaces                "Don't convert spaces to tabs
-
-set backspace=2
+set nojoinspaces                "disable convert spaces to tabs
+set backspace=2                 "set backspace behavior
