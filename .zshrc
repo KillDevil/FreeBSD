@@ -87,5 +87,8 @@ export BLOCKSIZE=K
 # Alias
 alias v=vim
 alias vi=vim
+alias dl='docker ps -l'
+#Deletes all stopped containers
+alias drm='docker rm $(docker ps -a -q)'
 
 source /etc/profile
