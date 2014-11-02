@@ -1,6 +1,8 @@
 source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
+" Restore the last edit position
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 set diffexpr=MyDiff()
 function MyDiff()
@@ -115,6 +117,7 @@ Bundle 'Shougo/neocomplete'
 Bundle 'Shougo/neosnippet'
 "Bundle 'tpope/vim-pathogen'
 Bundle 'scrooloose/syntastic'
+Bundle 'The-NERD-Commenter'
 
 "haskell develop stuff
 "autocmd BufEnter *.hs set formatprg=pointfree
@@ -151,6 +154,7 @@ set tags=tags;
 set autochdir
 set noswapfile
 set nobackup
+set undodir=~/.undodir
 set nowritebackup
 set noeb
 set number
