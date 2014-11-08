@@ -109,7 +109,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " scripts not on GitHub
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/command-t'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Bundle 'file:///home/gmarik/path/to/plugin'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
