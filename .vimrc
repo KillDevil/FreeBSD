@@ -1,3 +1,63 @@
+"""""""""""""""""""""""""""""
+"Vundle BEGIN
+"""""""""""""""""""""""""""""
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Plugin 'Shougo/neosnippet'
+Plugin 'scrooloose/syntastic'
+Plugin 'The-NERD-Commenter'
+
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+"Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+"""""""""""""""""""""""""""""
+" Vundle END
+"""""""""""""""""""""""""""""
+
 source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
@@ -73,61 +133,6 @@ set encoding=utf-8
 """""""""""""""""""""""""""""
 :set list listchars=tab:»\ ,trail:.
 
-"""""""""""""""""""""""""""""
-"Vundle
-"""""""""""""""""""""""""""""
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-"set rtp+=$HOME/.vim/bundle/vundle/
-"set rtp+=vimfiles/bundle/vundle/
-"call vundle#rc()
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-"let path='~/.vim/bundle'
-"call vundle#rc()
-
-" alternatively, pass a path where Vundle should install bundles
-"let path = '~/some/path/here'
-"call vundle#rc(path)
-
-" let Vundle manage Vundle, required
-Bundle 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep bundle commands between here and filetype plugin indent on.
-" scripts on GitHub repos
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" scripts from http://vim-scripts.org/vim/scripts.html
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" scripts not on GitHub
-Bundle 'wincent/command-t'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Bundle 'file:///home/gmarik/path/to/plugin'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
-Bundle 'Shougo/neocomplete'
-Bundle 'Shougo/neosnippet'
-"Bundle 'tpope/vim-pathogen'
-Bundle 'scrooloose/syntastic'
-Bundle 'The-NERD-Commenter'
-
-"haskell develop stuff
-"autocmd BufEnter *.hs set formatprg=pointfree
-
-"另一个插件包管理程序
-"execute pathogen#infect()
-
-" All of your Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on     " required
 
 "
 " Brief help
