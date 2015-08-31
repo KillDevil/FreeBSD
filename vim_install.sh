@@ -5,13 +5,15 @@
 #yum install lua-devel
 apt-get install libncurses5-dev
 apt-get install python-dev
-apt-get install liblua5.1-dev
+apt-get install liblua5.1-0-dev
+
+make distclean
 ./configure \
   --disable-gui --enable-fontset --disable-xsmp \
-  --enable-python3interp --enable-rubyinterp=dynamic --enable-pythoninterp \
+  --enable-pythoninterp --enable-rubyinterp=dynamic --enable-pythoninterp \
   --enable-luainterp=dynamic --enable-perlinterp=dynamic \
   --enable-cscope --enable-multibyte --with-features=huge \
-  --with-compiledby=Yan Feng --with-modified-by=Yan Feng
+  --with-compiledby=闫峰 --with-modified-by=闫峰
 
 make -j2
 sudo make install
