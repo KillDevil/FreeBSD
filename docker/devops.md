@@ -181,3 +181,9 @@ docker push localhost:5000/yf
 ```
 docker pull localhost:5000/yf
 ```
+
+###常用操作
+
+删除所有运行在的容器
+```
+docker rm $(docker ps -a -q)
