@@ -14,6 +14,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'fatih/vim-go'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -148,10 +149,12 @@ let g:neocomplete#enable_at_startup = 1
 "set guifont=PowerlineSymbols\ for\ Powerline
 let g:Powerline_symbols='fanyc'
 
-" 颜色主题
 "colorscheme desert
 set t_Co=256
-colorscheme desert256   " tty
+"colorscheme desert256   " tty
+colorscheme gruvbox
+set background=dark
+"let g:gruvbox_contrast_dark='hard'
 
 "set makeprg=nmake
 set grepprg=ack\ -k
@@ -179,7 +182,7 @@ au BufNewFile,BufRead *.inc set filetype=nasm
 au bufreadpre,bufRead *.bnf set ft=bnf
 au BufNewFile,BufRead *.ebnf set filetype=ebnf
 
-set tabstop=8                   "tab: 8 spaces
+set tabstop=4                   "tab: 8 spaces
 set expandtab                   "Always uses spaces instead of tabs
 set softtabstop=4               "Insert 4 spaces when tab is pressed
 set shiftwidth=4                "An indent is 4 spaces
