@@ -131,7 +131,8 @@ set encoding=utf-8
 """""""""""""""""""""""""""""
 "显示空白行和制表符
 """""""""""""""""""""""""""""
-:set list listchars=tab:»\ ,trail:.
+set list listchars=tab:»\ ,trail:.
+":set list listchars=trail:.
 
 
 "
@@ -167,7 +168,7 @@ set nocompatible
 set laststatus=2    " always have status-line
 set rnu             " enable relative-line-number
 "set cursorcolumn    " hightlight current column
-"set cursorline
+set cursorline
 
 filetype on
 " syntax highlight
@@ -179,7 +180,7 @@ au BufNewFile,BufRead *.inc set filetype=nasm
 au bufreadpre,bufRead *.bnf set ft=bnf
 au BufNewFile,BufRead *.ebnf set filetype=ebnf
 
-set tabstop=8                   "tab: 8 spaces
+set tabstop=4                   "tab: 8 spaces
 set expandtab                   "Always uses spaces instead of tabs
 set softtabstop=4               "Insert 4 spaces when tab is pressed
 set shiftwidth=4                "An indent is 4 spaces
