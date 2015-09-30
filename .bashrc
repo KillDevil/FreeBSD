@@ -84,17 +84,28 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-export GOPATH=$HOME/projects/go
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias v='vim'
-alias g='git'
-alias p='python'
-alias d='docker'
-alias ack='ack-grep'
-alias c='cat'
+#alias ack='ack-grep'
+#alias v='vim'
+#alias g='git'
+
+function ack()
+{
+    ack-grep $@
+}
+
+function v()
+{
+    vim $@
+}
+
+function g()
+{
+    git $@
+}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -119,3 +130,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+function show_ip()
+{
+    ip route get 8.8.8.8 | awk '{print $NF; exit}';
+}
+
+export TERM=xterm-256color
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME"
