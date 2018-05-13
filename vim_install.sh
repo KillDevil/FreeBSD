@@ -13,7 +13,7 @@ make distclean
   --enable-pythoninterp --enable-rubyinterp=dynamic --enable-pythoninterp \
   --enable-luainterp=dynamic --enable-perlinterp=dynamic \
   --enable-cscope --enable-multibyte --with-features=huge \
-  --with-compiledby=闫峰 --with-modified-by=闫峰
+  --with-compiledby=yf --with-modified-by=yf
 
 make -j2
 sudo make install
